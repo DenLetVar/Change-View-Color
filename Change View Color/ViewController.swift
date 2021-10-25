@@ -9,38 +9,41 @@ import UIKit
 
 class ViewController: UIViewController {
    
+  
+    @IBOutlet var colorView: UIView!
+    
+    
     @IBOutlet var redSlider: UISlider!
-    @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+    @IBOutlet var greenSlider: UISlider!
+    
     
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    @IBOutlet var colorView: UIView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .lightGray
+        colorView.layer.cornerRadius = 15
         
-        redLabel.text = String(redSlider.value)
-        greenLabel.text = String(greenSlider.value)
-        blueLabel.text = String(blueSlider.value)
+        changeColor()
+    }
+    
+    func changeColor(){
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
         
+        redLabel.text = String(format: "%.2f", redSlider.value)
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+        blueLabel.text = String(format: "%.2f", blueSlider.value)
     }
-
-    @IBAction func redSliderAction(_ sender: Any) {
-        redLabel.text = String(round(redSlider.value * 100) / 100)
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
+    @IBAction func moveSliders() {
+        
+        changeColor()
     }
-    @IBAction func greenSliderAction(_ sender: Any) {
-        greenLabel.text = String(round(greenSlider.value * 100) / 100)
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
-    }
-    @IBAction func blueSliderAction(_ sender: Any) {
-        blueLabel.text = String(round(blueSlider.value * 100) / 100)
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
-    }
+    
+    
+    
     
     
     

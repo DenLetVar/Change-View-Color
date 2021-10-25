@@ -24,7 +24,7 @@
                                         <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                         <color key="thumbTintColor" systemColor="systemRedColor"/>
                                         <connections>
-                                            <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="RpP-LD-BeB"/>
+                                            <action selector="moveSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="Q6z-3t-5Wu"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g9v-se-kHw">
@@ -32,7 +32,7 @@
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                         <color key="thumbTintColor" systemColor="systemGreenColor"/>
                                         <connections>
-                                            <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="J2i-KE-Urq"/>
+                                            <action selector="moveSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="LkX-jG-bdR"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XW4-ON-ifd">
@@ -40,7 +40,7 @@
                                         <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                         <color key="thumbTintColor" systemColor="systemBlueColor"/>
                                         <connections>
-                                            <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ARI-FZ-YZk"/>
+                                            <action selector="moveSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="Q33-Tf-etP"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -116,13 +116,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueLabel" destination="W5n-JZ-k3k" id="QYx-Bj-ain"/>
-                        <outlet property="blueSlider" destination="XW4-ON-ifd" id="rk0-aa-yWM"/>
-                        <outlet property="colorView" destination="jxS-No-UTO" id="EQa-QQ-nxt"/>
-                        <outlet property="greenLabel" destination="9Tg-IO-cGz" id="GSy-Hr-hZJ"/>
-                        <outlet property="greenSlider" destination="g9v-se-kHw" id="eS5-eM-Z3k"/>
-                        <outlet property="redLabel" destination="nwp-j8-l05" id="GxT-QS-WtW"/>
-                        <outlet property="redSlider" destination="oNL-PS-BDm" id="bBR-BS-nKM"/>
+                        <outlet property="blueLabel" destination="W5n-JZ-k3k" id="lJF-kj-qzb"/>
+                        <outlet property="blueSlider" destination="XW4-ON-ifd" id="VwY-0j-YH3"/>
+                        <outlet property="colorView" destination="jxS-No-UTO" id="cC3-8b-60W"/>
+                        <outlet property="greenLabel" destination="9Tg-IO-cGz" id="kYQ-3j-vbe"/>
+                        <outlet property="greenSlider" destination="g9v-se-kHw" id="DLz-qS-Ijd"/>
+                        <outlet property="redLabel" destination="nwp-j8-l05" id="Do7-fK-s5B"/>
+                        <outlet property="redSlider" destination="oNL-PS-BDm" id="9ZV-ww-Aby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
